@@ -12,6 +12,8 @@
 		170CCEBF1D3B8A1300F56539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170CCEBD1D3B8A1300F56539 /* Main.storyboard */; };
 		170CCEC11D3B8A1300F56539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170CCEC01D3B8A1300F56539 /* Assets.xcassets */; };
 		170CCEC41D3B8A1300F56539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170CCEC21D3B8A1300F56539 /* LaunchScreen.storyboard */; };
+		170CCECC1D3B9E5500F56539 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170CCECB1D3B9E5500F56539 /* AVFoundation.framework */; };
+		17F79AD81D3C538A00111065 /* NSURL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F79AD71D3C538A00111065 /* NSURL+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		170CCEC01D3B8A1300F56539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		170CCEC31D3B8A1300F56539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		170CCEC51D3B8A1300F56539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170CCECB1D3B9E5500F56539 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		17F79AD71D3C538A00111065 /* NSURL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170CCECC1D3B9E5500F56539 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				170CCEB81D3B8A1300F56539 /* AudioDemo */,
 				170CCEB71D3B8A1300F56539 /* Products */,
+				170CCECB1D3B9E5500F56539 /* AVFoundation.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +66,7 @@
 				170CCEC01D3B8A1300F56539 /* Assets.xcassets */,
 				170CCEC21D3B8A1300F56539 /* LaunchScreen.storyboard */,
 				170CCEC51D3B8A1300F56539 /* Info.plist */,
+				17F79AD71D3C538A00111065 /* NSURL+.swift */,
 			);
 			path = AudioDemo;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F79AD81D3C538A00111065 /* NSURL+.swift in Sources */,
 				170CCEBC1D3B8A1300F56539 /* ViewController.swift in Sources */,
 				170CCEBA1D3B8A1300F56539 /* AppDelegate.swift in Sources */,
 			);
@@ -251,10 +259,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AudioDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ios.AudioDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -262,10 +273,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AudioDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ios.AudioDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -288,6 +302,7 @@
 				170CCECA1D3B8A1300F56539 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
